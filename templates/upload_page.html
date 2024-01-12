@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Upload Files</title>
+    <link rel="icon" href="../static/images/logo_pekundenaga.png" type="image/x-icon"/>
+    <style>
+        body{
+        font-family:Helvetica, sans-serif;
+        }
+
+        header.feature-box.right {
+            background-color: white;
+            color: black;
+            height: 90px;
+            padding: 5px;
+            text-align: right;
+            margin-top: -25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-text-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 40px;
+            margin-right: 10px;
+        }
+
+        .text {
+            font-size: 18px;
+            color: black;
+            font-family:'Calibri';
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            margin:10px;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+            margin:10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            margin:10px;
+        }
+        ul{
+        list-style:none;
+        }
+
+        li{
+            display:inline-block;
+            border-color:blue;
+            border-radius:10px;
+            padding:10px;
+            margin:10px;
+        }
+        li:hover{
+        background-color:dodgerblue;
+        margin:10px;
+        }
+
+        header.feature-box.top{
+        background-color:black;
+        height:100px;
+        margin:0px;
+        padding:20px;
+        text-align:center;
+        }
+        header.feature-box.second{
+        height:50px;
+        text-align:center;
+        margin-top:-30px;
+            color:black;
+            font-family:Calibri;
+        }
+        .features{
+          background-color:black;
+          width: 900px;
+          height: 700px;
+          border-radius: 35px;
+          object-fit: contain;
+          margin:20px;
+        }
+        section.col-sm{
+          background-color:black;
+          width: 1000px;
+          height: 650px;
+          border-radius: 35px;
+          object-fit: contain;
+          margin:40px auto;
+            display:block;
+        }
+
+        img{
+          width: 900px;
+          height: 600px;
+          border-radius: 35px;
+          object-fit: contain;
+          margin:40px;
+        }
+
+        .new{
+        color:black;
+        margin:0px;
+        padding:10px;
+        background-color:green;
+        margin:0px;
+        margin-top:-10px;
+        }
+
+        footer{
+        text-align:center;
+        color:gray;
+        }
+
+        .footer_p{
+            font-size:12px;
+            font-family: Helvetica;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="feature-box right">
+            <div class="logo-text-container">
+                <img src="../static/images/logo_pekundenaga.png" alt="Logo" class="logo">
+                <div class="text">
+                    <p>PekundeNaga</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/upload_file">Upload</a></li>
+                    <li><a href="/webcam">Live</a></li>
+                </ul>
+            </nav>
+    </header>
+<header class="feature-box second">
+     <h1><strong>Upload Files</strong></h1>
+</header>
+
+  <section class="col-sm " >
+          <img src="{{ url_for('video') }}"   alt="Upload video">
+
+  </section>
+<section>
+    <div class="new" >
+      <form method = 'POST' enctype="multipart/form-data" style="align-content: center; text-align: center;display: flex;">
+        {{form.hidden_tag()}}
+        {{form.file(class_="custom-file-input")}}
+
+        <div>
+            <button type="submit" name="favorite" value="x" class="btnCustom">
+                Submit
+            </button>
+        </div>
+      </form>
+    </div>
+</section>
+
+<footer>
+    <p class="footer_p">Copyright 2024, PekundeNaga Team</p>
+</footer>
+</body>
+</html>

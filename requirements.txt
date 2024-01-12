@@ -1,0 +1,8 @@
+ultralytics
+numpy
+matplotlib
+flask_wtf
+flask
+wtforms
+werkzeug
+cv2

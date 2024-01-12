@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PekundeNaga</title>
+    <link rel="icon" href="../static/images/logo_pekundenaga.png" type="image/x-icon"/>
+    <style>
+        body{
+        font-family:Helvetica, sans-serif;
+        }
+
+        header.feature-box.right {
+            background-color: white;
+            color: black;
+            height: 90px;
+            padding: 5px;
+            text-align: right;
+            margin-top: -25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-text-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 40px;
+            margin-right: 10px;
+        }
+
+        .text {
+            font-size: 18px;
+            color: black;
+            font-family:'Calibri';
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            margin:10px;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+            margin:10px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            margin:10px;
+        }
+
+        header.feature-box.below{
+        height:300px;
+        background-color:blue;
+        margin-top:-20px;
+        background-image:url("../static/images/naga_banner.jpg");
+        background-size:100%;
+        background-position:center;
+        }
+
+        ul{
+        list-style:none;
+        }
+
+        li{
+            display:inline-block;
+            border-color:blue;
+            border-radius:10px;
+            padding:10px;
+            margin:10px;
+        }
+        li:hover{
+        background-color:dodgerblue;
+        margin:10px;
+        }
+
+        header a{
+        color:black;
+        text-decoration:none;
+        width:100%;
+        }
+
+        .details{
+        height:72px;
+        margin:40px;
+        font-size:36px;
+        text-align:center;
+        color:black;
+        }
+
+        .features{
+        background:white;
+        color:gray;
+        display:flex;
+        flex-direction:row;
+        padding:20px;
+        }
+
+        .features figure{
+        width:400px;
+        margin:auto;
+        text-align:center;
+        text-transform:uppercase;
+        }
+
+        .features figure img{
+        border-radius:10%;
+        width:400px;
+        }
+
+        div.main{
+        display:flex;
+        margin:40px;
+        letter-spacing:1px;}
+
+        h1{
+            font-family: "Calibri";
+            font-size: 42px;
+        }
+
+        h2{
+            font-family: "Calibri";
+            font-size: 54px;
+            color: black;
+        }
+
+        p {
+            font-family: "Calibri Light";
+            font-size: 24px;
+        }
+
+        .subpart2{
+        text-align:center;
+        text-transform:uppercase;
+        }
+
+        .subpart2 figure img{
+        border-radius:2%;
+        width:600px;
+        }
+
+        footer{
+        text-align:center;
+        color:gray;
+        }
+
+        .footer_p{
+            font-size:12px;
+            font-family: Helvetica;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="feature-box right">
+        <div class="logo-text-container">
+            <img src="../static/images/logo_pekundenaga.png" alt="Logo" class="logo">
+            <div class="text">
+                <p>PekundeNaga</p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/upload_file">Upload</a></li>
+                <li><a href="/webcam">Live</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <header class="feature-box below">
+    </header>
+
+    <div class="main">
+        <div class="subpart1">
+            <h1>Selamat Datang di PekundeNaga</h1>
+            <p>Situs ini merupakan situs yang ditujukan untuk deteksi kualitas buah Naga yang diciptakan atas dasar kerja sama dari Kebun Wisata Buah Naga Desa Pekunden dan Mahasiswa Institut Teknologi Telkom Purwokerto.</p><br>
+            <p>Dibantu oleh algoritma YOLOv8 Nano, situs ini mampu mendeteksi kualitas buah Naga dengan akurasi sebesar 70%.</p>
+        </div>
+
+      <div class="subpart2"><figure>
+      <img src="../static/images/kebun_landscape.jpg"  alt="Landscape Kebun Pekunden">
+          <figcaption>Kebun Buah Naga Desa Pekunden</figcaption>
+        </figure>
+      </div>
+  </div>
+
+    <section class="details">
+        <h1>Our Features</h1>
+    </section>
+
+    <section class="features">
+        <figure>
+            <h2>70%</h2>
+            <p>Akurasi Deteksi sebesar 70%</p>
+        </figure>
+        <figure>
+            <h2>4 Kelas Deteksi</h2>
+            <p>Bunga, Mentah, Semi-Matang, Matang</p>
+        </figure>
+        <figure>
+            <h2>1096 Gambar</h2>
+            <p>Data untuk Melatih Model</p>
+        </figure>
+    </section>
+
+<footer>
+    <p class="footer_p">Copyright 2024, PekundeNaga Team</p>
+</footer>
+</body>
+</html>
