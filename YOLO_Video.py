@@ -2,6 +2,11 @@ from ultralytics import YOLO
 import cv2
 import math
 
+def preprocess_frame(frame):
+    # Resize the frame to 640x640
+    resized_frame = cv2.resize(frame, (640, 640))
+    return resized_frame
+
 
 def video_detection(path_x):
     video_capture = path_x
@@ -13,6 +18,11 @@ def video_detection(path_x):
 
     while True:
         success, img = cap.read()
+        if not success:
+            break
+
+        # Preprocess the frame
+        img = preprocess_frame(img)
         results = model(img, stream=True)
         for r in results:
             boxes = r.boxes
